@@ -1,0 +1,24 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Windows shortcuts and Office temp files
+*.lnk
+~$*
+
+# Temporary/backup files
+*.tmp
+*.bak
+
+# Logs
+*.log
+
+# Environment files (for the future API keys I will add, etc.)
+.env
+
+# VS Code settings
+.vscode/
+
+# Node modules (just in case I need a npm later)
+node_modules/
+

@@ -1,0 +1,255 @@
+/* Light mode (default) variables */
+body {
+    --primary-color: #72246c;
+    --secondary-color: #c506b5;
+    --text-color: #333;
+    --bg-color: #f8f9fa;
+    --card-bg: #fff;
+    --shadow: rgba(0, 0, 0, 0.1);
+    
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+/* Dark mode variables */
+body.dark-mode {
+    --primary-color: #4da8da;
+    --secondary-color: #1a2530;
+    --text-color: #f0f0f0;
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --shadow: rgba(255, 255, 255, 0.05);
+}
+
+
+/* Fix for text visibility in dark mode */
+body.dark-mode .card,
+body.dark-mode .card-body,
+body.dark-mode .card-title,
+body.dark-mode .card-text,
+body.dark-mode .experience-item h4,
+body.dark-mode .experience-item ul,
+body.dark-mode .experience-item li {
+    color: var(--text-color) !important;
+}
+
+/* Fix for muted text in dark mode */
+body.dark-mode .text-muted {
+    color: #a0a0a0 !important;
+}
+
+/* Fix for section titles and headings */
+body.dark-mode .section-title,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: var(--text-color) !important;
+}
+
+/* Fix for list items in experience section */
+body.dark-mode .experience-item ul li {
+    color: var(--text-color) !important;
+}
+
+.navbar {
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 10px var(--shadow);
+}
+
+.nav-link, .navbar-brand {
+    color: var(--text-color) !important;
+}
+
+section {
+    padding: 80px 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.section-title {
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: none;
+    box-shadow: 0 5px 15px var(--shadow);
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.skill-card {
+    text-align: center;
+    padding: 20px;
+    height: 100%;
+}
+
+.skill-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.language-card {
+    perspective: 1000px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.language-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.language-card.flipped .language-card-inner {
+    transform: rotateY(180deg);
+}
+
+.language-card-front, .language-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.language-card-front {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.language-card-back {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.progress {
+    height: 8px;
+    margin-top: 10px;
+}
+
+.experience-item {
+    margin-bottom: 30px;
+}
+
+.mode-toggle {
+    cursor: pointer;
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn-custom {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.back-to-top.show {
+    opacity: 1;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+}
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+#h51, .card-title {
+    color: var(--primary-color);
+}
