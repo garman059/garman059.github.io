@@ -9,4 +9,4 @@ This is my personal portfolio site, showcasing my projects, skills, and contact 
 - Embedded project previews
 - Hosted on GitHub Pages
 
-Visit the live site: [https://garman059.github.io](https://gardman059.github.io)
+Visit the live site: [https://garman059/garman059.github.io](https://garman059/gardman059.github.io)
