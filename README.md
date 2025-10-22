@@ -16,7 +16,7 @@ This portfolio showcases selected projects, technologies I’ve worked with, and
 
 ## Contact
 
-Email: hello@example.com  
+Email: hellogeorgina@outlook.com  
 GitHub: [garman059](https://github.com/garman059)
 
 ---
